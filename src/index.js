@@ -1,18 +1,19 @@
 console.log("hello...");
 import menu from "./pages/menu";
+import homePage from "./pages/home";
 
 const header = (title, mottoText) => {
   // title
   const content = document.getElementById("content");
   const nav = document.createElement("nav");
   content.appendChild(nav);
-  const titleText = document.createElement("div");
+  const titleText = document.createElement("h1");
   titleText.classList.add("title");
   nav.appendChild(titleText);
   titleText.innerHTML = title;
   // motto
-  const motto = document.createElement("div");
-  motto.classList.add("moto");
+  const motto = document.createElement("h2");
+  motto.classList.add("motto");
   nav.appendChild(motto);
   motto.innerHTML = mottoText;
   // tabs
@@ -35,5 +36,7 @@ const header = (title, mottoText) => {
   mainMenu.appendChild(liMenu);
 }
 
+
+
 header("Restauranty", "Gluttony for the win!!!");
-menu();
+homePage();
