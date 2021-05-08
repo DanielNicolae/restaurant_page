@@ -34,19 +34,6 @@ body
   font-weight: 800;
 }
 
-#content main .menu
-{
-  text-align: center;
-  color: rgb(0,0,0);
-  padding-top: 5em;
-}
-
-#content main .menu .menuTitle
-{
-  font-size: 30px;
-  margin-bottom: 1em;
-}
-
 #content nav .mainMenu
 {
   list-style: none;
@@ -56,8 +43,25 @@ body
   align-items: center;
 }
 
-#content nav .mainMenu li .homePage,
-#content nav .mainMenu li .menuPage
+#content main .menu
+{
+  display: none;
+  text-align: center;
+  color: rgb(6, 70, 247);
+  padding-top: 5em;
+  font-weight: 800;
+}
+
+#content main .menu .menuTitle
+{
+  font-size: 30px;
+  margin-bottom: 1em;
+}
+
+
+
+#content nav .mainMenu li .homePageButton,
+#content nav .mainMenu li .menuPageButton
 {
   font-size: 0.8em;
   background: rgba(70, 70, 70, 0.7);
@@ -67,15 +71,15 @@ body
   padding: 0.5em;
 }
 
-#content nav .mainMenu li .homePage:hover,
-#content nav .mainMenu li .menuPage:hover
+#content nav .mainMenu li .homePageButton:hover,
+#content nav .mainMenu li .menuPageButton:hover
 {
   background: rgba(70, 70, 70, 1);
   color: rgb(255, 136, 0);
 }
 
-#content nav .mainMenu li .homePage:active,
-#content nav .mainMenu li .menuPage:active
+#content nav .mainMenu li .homePageButton:active,
+#content nav .mainMenu li .menuPageButton:active
 {
   background: rgb(255, 255, 255);
   color: rgb(0, 6, 82);
@@ -83,6 +87,8 @@ body
 
 #content main .home
 {
+  display: block;
+  padding-top: 5em;
   text-align: center;
   color: rgb(41, 62, 255);
 }
