@@ -1,4 +1,4 @@
-console.log("hello...");
+
 import menu from "./pages/menu";
 import homePage from "./pages/home";
 
@@ -24,19 +24,35 @@ const header = (title, mottoText) => {
   const liHome = document.createElement("li");
   const homePage = document.createElement("button");
   homePage.innerHTML = "Home";
-  homePage.classList.add("homePage");
+  homePage.classList.add("homePageButton");
   liHome.appendChild(homePage);
   // menu page
   const liMenu = document.createElement("li");
   const menuPage = document.createElement("button");
-  menuPage.classList.add("menuPage");
+  menuPage.classList.add("menuPageButton");
   menuPage.innerHTML = "Menu";
   liMenu.appendChild(menuPage);
   mainMenu.appendChild(liHome);
   mainMenu.appendChild(liMenu);
+  // navigation logic
+  homePage.addEventListener("click", showHome);
+  menuPage.addEventListener("click", showMenu);
 }
-
-
 
 header("Restauranty", "Gluttony for the win!!!");
 homePage();
+menu();
+
+function showMenu() {
+  const home = document.getElementsByClassName("home")[0];
+  const menu = document.getElementsByClassName("menu")[0];
+  home.style.display = "none";
+  menu.style.display = "block";
+}
+
+function showHome() {
+  const home = document.getElementsByClassName("home")[0];
+  const menu = document.getElementsByClassName("menu")[0];
+  home.style.display = "block";
+  menu.style.display = "none";
+}
