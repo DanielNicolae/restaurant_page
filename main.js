@@ -1,0 +1,1 @@
+console.log("hello..."),(e=>{const t=document.getElementById("content"),n=document.createElement("nav");t.appendChild(n);const d=document.createElement("div");d.classList.add("title"),n.appendChild(d),d.innerHTML="Restauranty";const o=document.createElement("div");o.classList.add("moto"),n.appendChild(o),o.innerHTML="Gluttony for the win!!!"})();
